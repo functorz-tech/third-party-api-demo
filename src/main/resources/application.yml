@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    platform: postgresql
+    driver-class-name: org.postgresql.Driver
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD:Doushizhutou3}
+    initialization-mode: never
+    hikari:
+      maximum-pool-size: ${DB_POOL_SIZE:5}
+  flyway:
+    baseline-on-migrate: true
+    validate-on-migrate: true
+    password: ${DB_PASSWORD}
+    user: ${DB_USERNAME}
+    url: ${DB_URL}
+    skip-default-callbacks: true
+    clean-disabled: true
+  jpa:
+    show-sql: true
+
+jwt:
+  secret: sdgfagkdafgkvlfkbgvnk
+  issuer: functorz
+  type: HS256
+
+password:
+  salt: $2a$10$3DQkp2ArgG557cDhPQcuqO
