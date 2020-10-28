@@ -132,14 +132,11 @@
           "method": "GET",
           "authenticationRequired": false,
           "parameters": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "key": { "const": "id" },
-                "value": { "type": "number" }
-              }
-            }
+            "type": "object",
+            "properties": {
+              "id": { "type": "integer"}
+            },
+            "required": ["id"]
           },
           "outputSchema": {
             "type": "object",
